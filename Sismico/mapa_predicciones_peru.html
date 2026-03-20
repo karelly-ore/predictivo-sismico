@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6b82c9b7e9e791bc4db6b5d54627ae78 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6b82c9b7e9e791bc4db6b5d54627ae78" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6b82c9b7e9e791bc4db6b5d54627ae78 = L.map(
+                "map_6b82c9b7e9e791bc4db6b5d54627ae78",
+                {
+                    center: [-9.19, -75.01],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3277b2a063f93eb0aa441496bac92cd9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3277b2a063f93eb0aa441496bac92cd9.addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var marker_a144342ce86922ebc432b7162fd1119a = L.marker(
+                [-16.2, -73.8],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_e62c8a717d6c44d455e93114ef3663f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55cd3ee42a8d3f9290e4d82951fda790 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_faaaba3f82dc1c7be1d77208ede8363a = $(`<div id="html_faaaba3f82dc1c7be1d77208ede8363a" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 02:00 hrs              </small>         </div>         </div>`)[0];
+                popup_55cd3ee42a8d3f9290e4d82951fda790.setContent(html_faaaba3f82dc1c7be1d77208ede8363a);
+            
+        
+
+        marker_a144342ce86922ebc432b7162fd1119a.bindPopup(popup_55cd3ee42a8d3f9290e4d82951fda790)
+        ;
+
+        
+    
+    
+                marker_a144342ce86922ebc432b7162fd1119a.setIcon(icon_e62c8a717d6c44d455e93114ef3663f0);
+            
+    
+            var marker_b728a5ea1a84c9ca110a28077a95b1d8 = L.marker(
+                [-13.5, -76.9],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_3aeb4a6180f0b45ba54ae2a6d4325509 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac18c9504eb0b63645013da5eec352d6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f8433167e1ad41cb874699a1c4fbe58d = $(`<div id="html_f8433167e1ad41cb874699a1c4fbe58d" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:orange;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>30.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 05:00 hrs              </small>         </div>         </div>`)[0];
+                popup_ac18c9504eb0b63645013da5eec352d6.setContent(html_f8433167e1ad41cb874699a1c4fbe58d);
+            
+        
+
+        marker_b728a5ea1a84c9ca110a28077a95b1d8.bindPopup(popup_ac18c9504eb0b63645013da5eec352d6)
+        ;
+
+        
+    
+    
+                marker_b728a5ea1a84c9ca110a28077a95b1d8.setIcon(icon_3aeb4a6180f0b45ba54ae2a6d4325509);
+            
+    
+            var marker_9431be9affd417d40c44ffe3cb028b9d = L.marker(
+                [-10.8, -78.6],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_392a71865eba1ee2f15e9928be5dfc88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5e4769562a03a3a84575dd47977e465 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8bc27974200c25416d0b7518c41eacad = $(`<div id="html_8bc27974200c25416d0b7518c41eacad" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 16:00 hrs              </small>         </div>         </div>`)[0];
+                popup_e5e4769562a03a3a84575dd47977e465.setContent(html_8bc27974200c25416d0b7518c41eacad);
+            
+        
+
+        marker_9431be9affd417d40c44ffe3cb028b9d.bindPopup(popup_e5e4769562a03a3a84575dd47977e465)
+        ;
+
+        
+    
+    
+                marker_9431be9affd417d40c44ffe3cb028b9d.setIcon(icon_392a71865eba1ee2f15e9928be5dfc88);
+            
+    
+            var marker_e45f959fb0c9d0916e2a44565ac16905 = L.marker(
+                [-5.7, -75.6],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_eba75b03992218b1867bbb0d889347b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f62b2eb7f48c14682d09b0de4740273b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ffc9599bae04f7abd6ca25e63da4da8a = $(`<div id="html_ffc9599bae04f7abd6ca25e63da4da8a" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 02:00 hrs              </small>         </div>         </div>`)[0];
+                popup_f62b2eb7f48c14682d09b0de4740273b.setContent(html_ffc9599bae04f7abd6ca25e63da4da8a);
+            
+        
+
+        marker_e45f959fb0c9d0916e2a44565ac16905.bindPopup(popup_f62b2eb7f48c14682d09b0de4740273b)
+        ;
+
+        
+    
+    
+                marker_e45f959fb0c9d0916e2a44565ac16905.setIcon(icon_eba75b03992218b1867bbb0d889347b7);
+            
+    
+            var marker_f0533b84d301de4cb79ab3324c87d529 = L.marker(
+                [-9.3, -78.8],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_52c27cc7eb01bdcc23aec08ef9047014 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a343ff5b3c1ca533b2b6ae7427432135 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f3424c93e2f752a0276e8f6bc1a36d01 = $(`<div id="html_f3424c93e2f752a0276e8f6bc1a36d01" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 09:00 hrs              </small>         </div>         </div>`)[0];
+                popup_a343ff5b3c1ca533b2b6ae7427432135.setContent(html_f3424c93e2f752a0276e8f6bc1a36d01);
+            
+        
+
+        marker_f0533b84d301de4cb79ab3324c87d529.bindPopup(popup_a343ff5b3c1ca533b2b6ae7427432135)
+        ;
+
+        
+    
+    
+                marker_f0533b84d301de4cb79ab3324c87d529.setIcon(icon_52c27cc7eb01bdcc23aec08ef9047014);
+            
+    
+            var marker_eaec8df17796e05420ac267024ef222b = L.marker(
+                [-13.8, -69.3],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_8d4e51d38279eec4fa69915e4dd200fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_640e52c57bc2acbace2a388e0f8999ce = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_56740745e6072016a4d46515369080b5 = $(`<div id="html_56740745e6072016a4d46515369080b5" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 N/A              </small>         </div>         </div>`)[0];
+                popup_640e52c57bc2acbace2a388e0f8999ce.setContent(html_56740745e6072016a4d46515369080b5);
+            
+        
+
+        marker_eaec8df17796e05420ac267024ef222b.bindPopup(popup_640e52c57bc2acbace2a388e0f8999ce)
+        ;
+
+        
+    
+    
+                marker_eaec8df17796e05420ac267024ef222b.setIcon(icon_8d4e51d38279eec4fa69915e4dd200fb);
+            
+    
+            var marker_512be6a06f9818e78c6a305c3ccf838f = L.marker(
+                [-15.2, -75.9],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_9132aebfb2ecf87d5235431a47169022 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8eba8fcc59015d3d9b502ad0ba2cb002 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ef30a5da3ec50bb48bcd21bf94d8ebbc = $(`<div id="html_ef30a5da3ec50bb48bcd21bf94d8ebbc" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 04:00 hrs              </small>         </div>         </div>`)[0];
+                popup_8eba8fcc59015d3d9b502ad0ba2cb002.setContent(html_ef30a5da3ec50bb48bcd21bf94d8ebbc);
+            
+        
+
+        marker_512be6a06f9818e78c6a305c3ccf838f.bindPopup(popup_8eba8fcc59015d3d9b502ad0ba2cb002)
+        ;
+
+        
+    
+    
+                marker_512be6a06f9818e78c6a305c3ccf838f.setIcon(icon_9132aebfb2ecf87d5235431a47169022);
+            
+    
+            var marker_9eec131b469fe4106b2d258da21a0560 = L.marker(
+                [-12.3, -77.5],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_76429b6d66815f3c9888c90d88beb70a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb6e357f14df86b5c47fa3798fa95029 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e07040b094eeef7baeedc711c2a0c533 = $(`<div id="html_e07040b094eeef7baeedc711c2a0c533" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 01:00 hrs              </small>         </div>         </div>`)[0];
+                popup_bb6e357f14df86b5c47fa3798fa95029.setContent(html_e07040b094eeef7baeedc711c2a0c533);
+            
+        
+
+        marker_9eec131b469fe4106b2d258da21a0560.bindPopup(popup_bb6e357f14df86b5c47fa3798fa95029)
+        ;
+
+        
+    
+    
+                marker_9eec131b469fe4106b2d258da21a0560.setIcon(icon_76429b6d66815f3c9888c90d88beb70a);
+            
+    
+            var marker_eb130c22fd13a807fbe9eda51d237f01 = L.marker(
+                [-9.1, -71.5],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_26c41971863eb375f9ae147d5acf18e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3fb8b3a2f96ba26d5b176336cbc0c456 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e8e4a64bf5e6bb62a57e8e926295cb3c = $(`<div id="html_e8e4a64bf5e6bb62a57e8e926295cb3c" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.01%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 05:00 hrs              </small>         </div>         </div>`)[0];
+                popup_3fb8b3a2f96ba26d5b176336cbc0c456.setContent(html_e8e4a64bf5e6bb62a57e8e926295cb3c);
+            
+        
+
+        marker_eb130c22fd13a807fbe9eda51d237f01.bindPopup(popup_3fb8b3a2f96ba26d5b176336cbc0c456)
+        ;
+
+        
+    
+    
+                marker_eb130c22fd13a807fbe9eda51d237f01.setIcon(icon_26c41971863eb375f9ae147d5acf18e1);
+            
+    
+            var marker_7e77d40fa9b8d28f28477ff4a815c925 = L.marker(
+                [-18.0, -72.4],
+                {
+}
+            ).addTo(map_6b82c9b7e9e791bc4db6b5d54627ae78);
+        
+    
+            var icon_92a28ec7e1d064a38f8348207b2e643a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf0bd3b7632fbdcb71e7e64f8d94e78b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd598fc9bc3cad98c5093b768ff50e4a = $(`<div id="html_fd598fc9bc3cad98c5093b768ff50e4a" style="width: 100.0%; height: 100.0%;">         <div style='width: 180px; text-align: center; font-family: sans-serif;'>             <h4 style='color:green;'><b>Riesgo Sísmico (>5.0)</b></h4>             <h2 style='margin: 10px 0;'>0.00%</h2>             <small>Próximos 7 días</small>                          <hr style='border: 0; border-top: 1px solid #ddd; margin: 10px 0;'>             <small style='color: #555;'>                 <b>Hora pico histórica:</b><br>                 N/A              </small>         </div>         </div>`)[0];
+                popup_cf0bd3b7632fbdcb71e7e64f8d94e78b.setContent(html_fd598fc9bc3cad98c5093b768ff50e4a);
+            
+        
+
+        marker_7e77d40fa9b8d28f28477ff4a815c925.bindPopup(popup_cf0bd3b7632fbdcb71e7e64f8d94e78b)
+        ;
+
+        
+    
+    
+                marker_7e77d40fa9b8d28f28477ff4a815c925.setIcon(icon_92a28ec7e1d064a38f8348207b2e643a);
+            
+</script>
+</html>
